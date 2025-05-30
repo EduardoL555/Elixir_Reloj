@@ -231,11 +231,6 @@ defmodule JswatchWeb.ClockManager do
      }}
   end
 
-  def handle_info(:start_alarm, state) do
-    IO.puts("Evento de alarma recibido (start_alarm)")
-    {:noreply, state}
-  end
-
   # Ignorar eventos de release explícitamente
   def handle_info(:"top-left-pressed", state), do: {:noreply, state}
   def handle_info(:"top-left-released", state), do: {:noreply, state}
